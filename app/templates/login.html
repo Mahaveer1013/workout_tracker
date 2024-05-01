@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="login-page">
+        <div class="login-form">
+            <form class="login" method="POST">
+                {{ login_form.csrf_token }}
+                <div class="username-div">
+                    <label for="login-username">{{ login_form.username.label() }}</label>
+                    {{ login_form.username(class='username',id='login-username', placeholder='Username') }}
+                </div>
+                <div class="password-div">
+                    <label for="login-password">{{ login_form.password.label() }}</label>
+                    {{ login_form.password(class='password',id='login-password', placeholder='Password') }}
+                </div>
+                <div class="submit-div">
+                    {{ login_form.submit(class='submit-btn-login') }}
+                </div>
+            </form>
+            Create An Account <span class="alter-form-btn"  onclick="openRegisterForm()">Here</span>
+        </div>
+        <div class="register-form" style="display: none;">
+            <form class="register" method="POST">
+                {{ register_form.csrf_token }}
+                <div class="username-div">
+                    <label for="register-username">{{ register_form.username.label() }}</label>
+                    {{ register_form.username(class='username',id='register-username', placeholder='Username') }}
+                </div>
+                <div class="email-div">
+                    <label for="register-email">{{ register_form.email.label() }}</label>
+                    {{ register_form.email(class='email',id='register-email', placeholder='Email') }}
+                </div>
+                <div class="password-div">
+                    <label for="register-password">{{ register_form.password.label() }}</label>
+                    {{ register_form.password(class='password',id='register-password', placeholder='Password') }}
+                </div>
+                <div class="password-div">
+                    <label for="confirm_password">{{ register_form.confirm_password.label() }}</label>
+                    {{ register_form.confirm_password(class='password',id='confirm_password', placeholder='Confirm Password') }}
+                </div>
+                <div class="submit-div">
+                    {{ register_form.submit(class='submit-btn-register') }}
+                </div>
+            </form>
+            Have An Account ? Login <span class="alter-form-btn" onclick="openLoginForm()">Here</span>
+            
+        </div>
+    </div>
+{% endblock %}

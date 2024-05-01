@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.flash {
+    padding: 10px;
+    background-color: #f44336;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+.close-button {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* authentication forms */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #86a8b2;
+}
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+.login-form, .register-form {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+}
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+input[type="text"], input[type="password"], input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.toggle-button {
+    background-color: transparent;
+    border: none;
+    color: #007bff;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.register-form {
+    display: none;
+}
+.alter-form-btn{
+    color: #007bff;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.submit-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.submit-btn-register, .submit-btn-login {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    font-size: large;
+    border-radius: 5px;
+    padding: 7px 24px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3; /* Darker shade of primary color on hover */
+}

@@ -3,3 +3,4 @@ flask_cors
 flask_jwt_extended
 flask_sqlalchemy
 flask_login
+flask_wtf

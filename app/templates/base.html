@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Till Failure</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for messages in messages %}
+                <div class="flash">
+                    <span>{{ messages }}</span>
+                    <span class="close-button" onclick="closeFlash()">X</span>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <script>
+        function closeFlash() {
+            var flash = document.querySelector('.flash');
+            flash.style.display = 'none';
+        }
+    </script>
+    {% block content %}
+
+    {% endblock %}
+
+    <script src="../static/js/script.js"></script>
+</body>
+</html>
